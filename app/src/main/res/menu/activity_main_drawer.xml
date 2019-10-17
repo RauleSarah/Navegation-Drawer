@@ -5,20 +5,20 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_Naruto"
-            android:title="Naruto" />
+            android:id="@+id/nav_naruto"
+            android:title="naruto" />
         <item
-            android:id="@+id/nav_RickAndMorty"
-            android:title="RickandMorty" />
+            android:id="@+id/nav_rickandmorty"
+            android:title="rickandmorty" />
         <item
-            android:id="@+id/nav_Voltron"
-            android:title="Voltron" />
+            android:id="@+id/nav_voltron"
+            android:title="voltron" />
         <item
-            android:id="@+id/nav_STD"
-            android:title="StarTrekDiscovery" />
+            android:id="@+id/nav_star"
+            android:title="startrekdiscovery" />
         <item
-            android:id="@+id/nav_GOT"
-            android:title="GameOfThrones" />
+            android:id="@+id/nav_got"
+            android:title="gameofthrones" />
     </group>
 
     <item android:title="Communicate">

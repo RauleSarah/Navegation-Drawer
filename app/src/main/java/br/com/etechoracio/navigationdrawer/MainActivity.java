@@ -5,6 +5,8 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -83,19 +85,29 @@ public class MainActivity extends AppCompatActivity
         int idImagem = 0;
         int id = item.getItemId();
 
-        if (id == R.id.nav_Naruto) {
+        if (id == R.id.nav_naruto) {
             nome = "Naruto";
-            idImagem = R.drawable.2.jpg;
+            idImagem = R.drawable.naruto;
             // Handle the camera action
-        } else if (id == R.id.nav_RickAndMorty) {
+        } else if (id == R.id.nav_rickandmorty) {
+            nome = "RickAndMorty";
+            idImagem = R.drawable.rickandmorty;
 
-        } else if (id == R.id.nav_Voltron) {
+        } else if (id == R.id.nav_voltron) {
+            nome = "voltron";
+            idImagem = R.drawable.rickandmorty;
+        } else if (id == R.id.nav_rickandmorty ){
 
-        } else if (id == R.id.nav_STD ){
-
-        } else if (id == R.id.nav_GOT) {
-
+        } else if (id == R.id.nav_got) {
+            nome = "got";
+            idImagem = R.drawable.got;
         }
+
+        Fragment fragment = CustomFragment.newInstance(nome,idImagem);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.content_frame,fragment);
+        transaction.commit();
+        setTitle(nome);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
